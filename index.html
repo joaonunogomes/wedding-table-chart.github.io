@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Distribuição das Mesas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      :root {
+        --lilas-principal: #c8b6e2;
+        --lilas-secundario: #e9def5;
+        --lilas-destaque: #9b7fcf;
+        --texto-escuro: #3a2f4f;
+        --fundo-base: #faf7fd;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 6rem 1rem 3rem;
+        font-family: "Georgia", serif;
+        color: var(--texto-escuro);
+        line-height: 1.6;
+
+        background-color: var(--fundo-base);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23c8b6e2' stroke-width='1' opacity='0.3'%3E%3Cpath d='M80 20 C60 40 60 60 80 80 C100 60 100 40 80 20 Z'/%3E%3Ccircle cx='80' cy='80' r='5' fill='%23c8b6e2'/%3E%3Cpath d='M30 110 C20 90 40 70 60 80'/%3E%3Cpath d='M130 110 C140 90 120 70 100 80'/%3E%3C/g%3E%3C/svg%3E");
+        background-repeat: repeat;
+        background-size: 180px 180px;
+      }
+
+      main {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .grelha-mesas {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 2rem;
+      }
+
+      .cartao-mesa {
+        background: white;
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+        border: 1px solid var(--lilas-secundario);
+        position: relative;
+      }
+
+      .numero-mesa {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: var(--lilas-destaque);
+        margin-bottom: 1rem;
+      }
+
+      .lista-convidados {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .lista-convidados li {
+        padding: 0.4rem 0;
+        border-bottom: 1px dashed var(--lilas-secundario);
+      }
+
+      .lista-convidados li:last-child {
+        border-bottom: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div class="grelha-mesas">
+        <section class="cartao-mesa">
+          <div class="numero-mesa">Mesa 1</div>
+          <ul class="lista-convidados">
+            <li>Ana Silva</li>
+            <li>João Silva</li>
+            <li>Maria Costa</li>
+            <li>Pedro Costa</li>
+          </ul>
+        </section>
+
+        <section class="cartao-mesa">
+          <div class="numero-mesa">Mesa 2</div>
+          <ul class="lista-convidados">
+            <li>Sofia Rodrigues</li>
+            <li>Rui Rodrigues</li>
+            <li>Inês Martins</li>
+            <li>Tiago Martins</li>
+          </ul>
+        </section>
+
+        <section class="cartao-mesa">
+          <div class="numero-mesa">Mesa 3</div>
+          <ul class="lista-convidados">
+            <li>Beatriz Lopes</li>
+            <li>André Lopes</li>
+            <li>Carolina Pires</li>
+            <li>Diogo Pires</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
